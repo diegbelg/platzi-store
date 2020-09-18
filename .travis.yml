@@ -11,8 +11,15 @@ git:
 
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+      - conedie@gmail.com
+      - diego.beltran.g@misena.edu.co
+    on_success: always
+    on_failure: always
 deploy:
-  provider: pages
+  provider: pages 
   skip-clean: true
   keep-history: true
   github-token: $GITHUB_TOKEN
